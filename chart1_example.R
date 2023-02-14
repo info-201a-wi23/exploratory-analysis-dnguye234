@@ -1,7 +1,7 @@
-x_values <- seq(1, 3)
-y_values <- seq(1,3)
+library("ggplot2")
+library("dplyr")
 
-library(ggplot2)
-ggplot() +
-  geom_point(aes(x=x_values, y = y_values))
+alc_consumption <- read.csv("C:/Users/mvere/OneDrive/Documents/student-por.csv", FALSE)
 
+student_alc_consumption <- alc_consumption %>% 
+  select(V2, V3, V5, V6, V9, V10, V11, V12, V15, V17, V18, V19, V21, V22, V24, V25, V26, V27, V28, V29, V30, V33)
