@@ -8,4 +8,5 @@ student_alc_consumption <- alc_consumption %>%
 names(student_alc_consumption) <- student_alc_consumption[1,]
 student_alc_consumption <- student_alc_consumption[-1,]
 ggplot(student_alc_consumption, aes(x = paid,y = Dalc)) +
-  geom_bar(stat = "identity")
+  geom_bar(stat = "identity") + 
+  labs(title = "Relationship between Workday Alcohol Consumption and Paid Courses", x = "Paid Courses", y = "Workday Alcohol Consumption")
