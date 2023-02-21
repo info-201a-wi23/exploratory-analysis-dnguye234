@@ -69,7 +69,6 @@ rating <- student_alc_consumption %>%
   summarise(avg_walc = mean(as.numeric(Walc))) %>%
   pull()
 
-
 not_paid_course <- student_alc_consumption %>%
   select(Dalc, paid) %>% 
   filter(paid == "no") %>%
@@ -90,7 +89,7 @@ summary_values <- list(not_paid_course, paid_course, num_walc, rating)
 
 ```
 
-Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students. Out of the almost 200 students in this data set who rated that they drink a 2 on a scale of 1-5 (low to high alcohol consumption) during the work week, `r toString(not_paid_course)` are not in paid classes. Compared to `r paid_course`, is a massive difference.
+Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students. Out of the almost 200 students in this data set who rated that they drink a 2 on a scale of 1-5 (low to high alcohol consumption) during the work week, `r toString(not_paid_course)` are not in paid classes. Compared to `r toString(paid_course)`, is a massive difference.
 
 ### Table
 
