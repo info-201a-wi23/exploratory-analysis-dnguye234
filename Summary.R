@@ -1,4 +1,4 @@
-summary_values <- c(not_paid_course, paid_course)
+summary_values <- list(not_paid_course, paid_course)
 
 
 

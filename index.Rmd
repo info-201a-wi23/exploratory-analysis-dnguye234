@@ -64,11 +64,7 @@ Describe why you included the table and what information it reveals
 
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
+We decided to include this chart because it reveals insight as to how being enrolled in extra, paid classes contributes to student alcohol consumption. Specifically, we were interested in how extra classes affect workday alcohol consumption, which means alcohol consumption throughout the week/school days. This chart showed that students who are not enrolled in paid classes have a higher likelihood of workday alcohol consumption.
 
 ``````{r, echo = FALSE, code = readLines("chart1_example.R")}
 library("ggplot2")
@@ -80,7 +76,7 @@ student_alc_consumption <- alc_consumption %>%
   select(V2, V3, V5, V6, V9, V10, V11, V12, V15, V17, V18, V19, V21, V22, V24, V25, V26, V27, V28, V29, V30, V33)
 names(student_alc_consumption) <- student_alc_consumption[1,]
 student_alc_consumption <- student_alc_consumption[-1,]
-ggplot(student_alc_consumption, aes(x = paid,y = Dalc)) +
+ggplot(student_alc_consumption, aes(x = paid,y = Dalc, color = paid)) +
   geom_bar(stat = "identity") + 
   labs(title = "Relationship between Workday Alcohol Consumption and Paid Courses", x = "Paid Courses", y = "Workday Alcohol Consumption")
 ```
