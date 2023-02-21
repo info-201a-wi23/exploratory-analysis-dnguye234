@@ -82,7 +82,6 @@ ggplot(student_alc_consumption, aes(x = paid,y = Dalc, color = paid)) +
 We decided to include this chart because it reveals insight as to how being enrolled in extra, paid classes contributes to student alcohol consumption. Specifically, we were interested in how extra classes affect workday alcohol consumption, which means alcohol consumption throughout the week/school days. This chart showed that students who are not enrolled in paid classes have a higher likelihood of workday alcohol consumption.
 
 ### Chart 2
-<<<<<<< HEAD
 ```{r, echo = FALSE, code = readLines("chart2_example.R")}
 library("ggplot2")
 library("dplyr")
