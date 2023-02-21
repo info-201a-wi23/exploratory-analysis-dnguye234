@@ -53,6 +53,12 @@ Some challenges and limitations that may come up with our project is that our da
 
 ### Summary Information
 ```{r, echo = FALSE, code = readLines("Summary.R")}
+alc_consumption <- read.csv("student-por.csv", FALSE)
+student_alc_consumption <- alc_consumption %>% 
+  select(V2, V3, V5, V6, V9, V10, V11, V12, V15, V17, V18, V19, V21, V22, V24, V25, V26, V27, V28, V29, V30, V33)
+names(student_alc_consumption) <- student_alc_consumption[1,]
+student_alc_consumption <- student_alc_consumption[-1,]
+
 not_paid_course <- student_alc_consumption %>%
   select(Dalc, paid) %>% 
   filter(paid == "no") %>%
@@ -70,7 +76,7 @@ paid_course <- student_alc_consumption %>%
 summary_values <- list(not_paid_course, paid_course)
 ```
 
-Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students. Out of the almost 200 students in this data set who rated that they drink a 2 on a scale of 1-5 (low to high alcohol consumption) during the work week, `r not_paid_course` are not in paid classes. Compared to `r paid_course`, is a massive difference.
+Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students. Out of the almost 200 students in this data set who rated that they drink a 2 on a scale of 1-5 (low to high alcohol consumption) during the work week, `r toString(not_paid_course)` are not in paid classes. Compared to `r paid_course`, is a massive difference.
 
 ### Table
 
