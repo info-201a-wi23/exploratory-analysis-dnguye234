@@ -1,5 +1,5 @@
 library(dplyr)
-setwd("~/Desktop")
+
 getwd()
 student_alc <- read.csv("/Users/nish1209/Desktop/student-por.csv", FALSE)
 View(student_alc)
