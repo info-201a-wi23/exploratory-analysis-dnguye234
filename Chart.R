@@ -1,7 +1,7 @@
 library("ggplot2")
 library("dplyr")
 
-alc_consumption <- read.csv("https://raw.githubusercontent.com/info-201a-wi23/exploratory-analysis-dnguye234/main/student-por.csv", stringsAsFactors = FALSE)
+alc_consumption <- read.csv("student-por.csv", stringsAsFactors = FALSE)
 
 
 student_alc_consumption <- alc_consumption %>%
