@@ -19,6 +19,12 @@ ggplot(data = student_alc_consumption) +
        y = "Rating of Weekend Alcohol Consumption",
        x = "Number of Students")
 
+num_walc <- student_alc_consumption %>%
+  group_by(Walc) %>%
+  summarise(sum(count))
+rating <- student_alc_consumption %>%
+  group_by(famrel) %>%
+  summarise(avg_walc = mean(as.numeric(Walc)))
 
 
 
