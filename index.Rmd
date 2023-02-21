@@ -83,10 +83,7 @@ We decided to include this chart because it reveals insight as to how being enro
 
 ### Chart 2
 <<<<<<< HEAD
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
-=======
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
->>>>>>> 9405bd17759256f09479e0f8a700afa24925a21d
+```{r, echo = FALSE, code = readLines("chart2_example.R")}
 library("ggplot2")
 library("dplyr")
 
