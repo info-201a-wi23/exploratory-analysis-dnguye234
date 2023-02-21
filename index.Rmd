@@ -64,11 +64,7 @@ Describe why you included the table and what information it reveals
 
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
+We decided to include this chart because it reveals insight as to how being enrolled in extra, paid classes contributes to student alcohol consumption. Specifically, we were interested in how extra classes affect workday alcohol consumption, which means alcohol consumption throughout the week/school days. This chart showed that students who are not enrolled in paid classes have a higher likelihood of workday alcohol consumption.
 
 ``````{r, echo = FALSE, code = readLines("chart1_example.R")}
 library("ggplot2")
