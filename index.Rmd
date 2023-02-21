@@ -9,46 +9,49 @@ Give your project a concise, interesting title that summarizes the entirety of y
 
 ### Authors
 
-Names of your team members
+Duyen T Nguyen, Mor Vered, Nishant Shah, Kim Tran
 
 ### Date
 
-Winter 2022
+Winter 2023
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+The main question we have with this data set is how popular is underage alcohol consumption? Underage substance usage is a significant health concern globally, and it is crucial to understand the root of the problem, such as what leads minors to consume alcohol, to create effective prevention. For this purpose, we want to analyze a data set containing the age of students who consume alcohol, their reasonings for doing so, as well as the various characteristics of minors that consume alcohol.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+Alcohol Consumption, Underage Substance Usage, Behavior, Health, Student
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+In this project, we want to analyze the age of student alcohol consumption and their environment to see if there is any significant correlations that may lead certain minor to be more likely to consume alcohol. Understand this could help us in providing edaquate resources to specific groups of students to help combat underage alcohol consumption. The main questions we want to answer:
+
+1. Which age group is the most common among this dataset? - To answer this question, we can group the provided data into specific age groups of interest (i.e 15-17, 18 - 22, etc.) to see the proportion of underage drinking among this group of participant.
+
+2. What are some correlations between student underage drinking and their environment? - This question will require us to analyze columns of this dataset, which include family size, parental education and career status, sex, quality of family relationship, etc. Are there any correlations between these and student that drink? What is the most common reason/factor among each age group? A gaze into this could help us with understanding why certain youth choose to drink, and the kind of social, mental, and physical factor that may lead to drinking.
+
+3. How does alcohol consumption affect students’ academic performance? - One of the biggest concern about underage alcohol consumption is the effect it may have on the brains that have yet to fully develop. Does underage alcohol consumption affect these students’ academic ability? Which group take the most toll from this? (It is also important to keep in mind that the students’ environment may also be a factor to their academic performance).
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+There are many health and safety risks associated with underage alcohol consumption that can negatively impact mental and physical well-being. We can gain a deeper understanding of the factors that drive underage drinking and its effects on students' lives by analyzing the dataset we chose. For example, in the article by Cleveland Clinic, it was indicated that emotional and physical changes, peer pressure, stress, transitions, and possibly more made youth in the U.S. partake in underage drinking. Using the sources as a guide and using our dataset to analyze, we can infer the possible issues of underage drinking in Portugal and find out why so many minors drink. As many as two minors per week have been caught for underage drinking in Portugal, where the legal age for alcohol was recently changed to 18 The Portugal News. The article claims that ever since the law was changed in Portugal that there have been a lot more cases of underage drinking caught by the police. However it doesn’t state why minors are drinking or any other information about it. Another article from the Center for Disease Control states that “among high school students, 29% have drank alcohol in the past 30 days” CDC. They state that even though under age high school drinking rates have been generally decreasing over the past few decades, rates are still high. The results in our sources suggest there are social, economic, and political influence in underage alcohol consumption in the U.S. and Portugal.
+
+References
+
+Centers for Disease Control and Prevention. (2022, October 26). Underage drinking. Centers for Disease Control and Prevention. Retrieved February 3, 2023, from https://www.cdc.gov/alcohol/fact-sheets/underage-drinking.htm Health and safety still tackling underage drinking one year on from legal age hike. The Portugal News. (2016, July 7). Retrieved February 3, 2023, from https://www.theportugalnews.com/news/health-and-safety-still-tackling-underage-drinking-one-year-on-from-legal-age-hike/38786 Underage drinking: Alcohol poisoning, binge drinking, drinking age. Cleveland Clinic. (2021, March 28). Retrieved February 3, 2023, from https://my.clevelandclinic.org/health/articles/17541-alcohol-underage-drinking
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+The data set being used is titled “Student Alcohol Consumption”, and this was found on Kaggle. The owner of this dataset goes by the name of UCI Machine Learning. The data reflects student alcohol use which was collected through a survey of students studying Portuguese and mathematics in primarily two secondary schools, Gabriel Peirera and Mousinho da Silveira, both located in Portugal. The data consists of information about students with respect to gender, age, and social culture. There is a separate dataset for each course, and there are several(382 specified in the data) students that belong to both sets. Both datasets have the same columns, a total of 33 - school, sex, age, address, famsize, Pstatus(parents apart or together), Medu(mother’s education), Fedu(father’s education), Mjob(Mother’s job), Fjob(Father’s job), reason(to choose this school), guardian, traveltime, studytime, failures, schoolsup (extra educational support), famup(family educational support), paid(extra paid classes), activities, nursery, higher(want to take higher education), internet, romantic(in a romantic relationship), famrel(quality of family relationships), freetime, goout(go out with friends), Dalc(workday alcohol consumption), Walc(weekend alcohol consumption), health, absences, G1(first period grade), G2(second period grade), G3(final grade). One of the main ethical considerations when working with this data is the accuracy of the responses, as students may underreport their alcohol consumption due to the legal age for drinking and potential societal repercussions. Additionally, the sample size is limited to only two schools in Portugal, which may not accurately represent the drinking patterns of students in other regions or countries. Furthermore, the dataset only includes information on students' alcohol consumption and does not address other factors, such as mental health or peer pressure, that may impact alcohol use.
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+One of the major possible implications that comes to mind is how this data can be used to design more effective and efficient alcohol prevention campaigns that target students. It can be used to understand the cultural, social, educational factors that influence students’ drinking behaviors, and create policies that target these factors. It can be used to develop policies aimed at reducing alcohol consumption and get a better idea of different factors that impact student alcohol consumption and craft policies to address them. It can also highlight the impact of parental education, family relationships and jobs on students’ alcohol consumption. For technologists, the findings from this dataset could also lead to the development of new tools and applications for tracking and monitoring alcohol consumption, which could be useful for parents, schools, and policymakers. These tools could be designed to help students and parents better understand the risks associated with alcohol consumption and provide early interventions to prevent harmful drinking behaviors.
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+
+Some challenges and limitations that may come up with our project is that our dataset does not originate from the United States, and considering this, we might have a harder time understanding how the trends we find within the dataset appear in the US among students. It is very hard to find any data for student alcohol consumption within America, and this could be because the legal age for drinking alcohol is so high compared to many other countries. Also, getting such data in the US is a privacy concern for the people involved, making it not accessible to a regular person. Thus, even though many students may participate in underage drinking, no one will talk about it in the US because they don’t want to get caught and have legal implications. We also have to consider that because we are using a dataset about something people do that is illegal, many people may lie and say they have never done it, when that might not be the case. This is something that we must take into consideration when looking at overall statistics and trends in the data.
 
 ### Summary Information
 
