@@ -1,7 +1,6 @@
 # Exploratory Analysis
 
-Link to your group's exploratory analysis here: https://info-201a-sp22.github.io/Exploratory-Analysis/index.html   
-(https://github.com/info-201a-wi23/exploratory-analysis-dnguye234.git)
+Link to your group's exploratory analysis here: file:///C:/Users/mvere/OneDrive/UW2026/INFO201/exploratory-analysis-dnguye234/index.html
 
 The purpose of this assignment is to provide you with the opportunity to explore your final project data and become familiar with collaborative coding techniques. By completing the assignment, you will demonstrate the following skills:
 
