@@ -52,16 +52,29 @@ One of the major possible implications that comes to mind is how this data can b
 Some challenges and limitations that may come up with our project is that our dataset does not originate from the United States, and considering this, we might have a harder time understanding how the trends we find within the dataset appear in the US among students. It is very hard to find any data for student alcohol consumption within America, and this could be because the legal age for drinking alcohol is so high compared to many other countries. Also, getting such data in the US is a privacy concern for the people involved, making it not accessible to a regular person. Thus, even though many students may participate in underage drinking, no one will talk about it in the US because they don't want to get caught and have legal implications. We also have to consider that because we are using a dataset about something people do that is illegal, many people may lie and say they have never done it, when that might not be the case. This is something that we must take into consideration when looking at overall statistics and trends in the data.
 
 ### Summary Information
+```{r, echo = FALSE, code = readLines("Summary.R")}
+not_paid_course <- student_alc_consumption %>%
+  select(Dalc, paid) %>% 
+  filter(paid == "no") %>%
+  filter(Dalc >= 2) %>% 
+  count() %>% 
+  pull()
+
+paid_course <- student_alc_consumption %>%
+  select(Dalc, paid) %>% 
+  filter(paid == "yes") %>%
+  filter(Dalc >= 2) %>% 
+  count() %>% 
+  pull()
+
+summary_values <- list(not_paid_course, paid_course)
+```
 
 Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students. Out of the almost 200 students in this data set who rated that they drink a 2 on a scale of 1-5 (low to high alcohol consumption) during the work week, `r not_paid_course` are not in paid classes. Compared to `r paid_course`, is a massive difference.
 
 ### Table
 
 ```{r, echo = FALSE, code = readLines("Table.R")}
-library(dplyr)
-student_alc <- read.csv("student-por.csv")
-
-
 table_student_alc <- select(student_alc, sex, age, 'Parental Status' = Pstatus , "Family Relationship" = famrel , "Going Out With Friends" = goout, "Weekday Alc Consumption" = Dalc, "Weekend Alc Consumption" = Walc, "Health Condition" = health  )
 
 table_student_alc <- table_student_alc %>% filter(age < 18 ) %>% head(50)
@@ -72,16 +85,7 @@ print(table_student_alc)
 
 ### Chart 1
 
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
-library("ggplot2")
-library("dplyr")
-
-alc_consumption <- read.csv("C:/Users/mvere/OneDrive/Documents/student-por.csv", FALSE)
-
-student_alc_consumption <- alc_consumption %>% 
-  select(V2, V3, V5, V6, V9, V10, V11, V12, V15, V17, V18, V19, V21, V22, V24, V25, V26, V27, V28, V29, V30, V33)
-names(student_alc_consumption) <- student_alc_consumption[1,]
-student_alc_consumption <- student_alc_consumption[-1,]
+```{r, echo = FALSE, code = readLines("Chart1.R")}
 ggplot(student_alc_consumption, aes(x = paid,y = Dalc, color = paid)) +
   geom_bar(stat = "identity") + 
   labs(title = "Relationship between Workday Alcohol Consumption and Paid Courses", x = "Paid Courses", y = "Workday Alcohol Consumption")
@@ -91,16 +95,7 @@ We decided to include this chart because it reveals insight as to how being enro
 
 ### Chart 2
 
-```{r, echo = FALSE, code = readLines("chart2_example.R")}
-library("ggplot2")
-library("dplyr")
-
-alc_consumption <- read.csv("/Users/duyennguyen/Desktop/Info201/Final_Proj_Data/student-por.csv", FALSE)
-
-student_alc_consumption <- alc_consumption %>% 
-  select(V2, V3, V5, V6, V9, V10, V11, V12, V15, V17, V18, V19, V21, V22, V24, V25, V26, V27, V28, V29, V30, V33)
-names(student_alc_consumption) <- student_alc_consumption[1, ]
-student_alc_consumption <- student_alc_consumption[-1, ]
+```{r, echo = FALSE, code = readLines("chart2.R")}
 student_alc_consumption <- student_alc_consumption %>%
   mutate(count = 1)
 # Number of students for each rating of weekend alcohol consumption, faceted by rating of family quality
@@ -120,12 +115,7 @@ I choose this faceted chart to see if there is any relationship to the number of
 
 I choose this scatter plot chart to see if theres a correlation between the different levels of weekend alcohol consumption and the different average grades students get. My hypothesis was that if students who have high levels of weekend alcohol consumption then their grades on average will be lower.
 
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
-library("ggplot2")
-library("dplyr")
-
-alc_consumption <- read.csv("https://raw.githubusercontent.com/info-201a-wi23/exploratory-analysis-dnguye234/main/student-por.csv", stringsAsFactors = FALSE)
-
+```{r, echo = FALSE, code = readLines("Chart.R")}
 
 student_alc_consumption <- alc_consumption %>%
   select(Walc, G1, G2, G3) %>%
