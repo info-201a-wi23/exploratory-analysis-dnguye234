@@ -103,6 +103,20 @@ table_student_alc <- table_student_alc %>%  group_by(sex, `Parental Status`) %>%
 print(table_student_alc)
 ```
 
+Legend:
+1. sex - student's sex (binary: 'F' - female or 'M' - male)
+2. age - student's age (numeric: from 15 to 22)
+3. Parental Status - parent's cohabitation status (binary: 'T' -    living together or 'A' - apart)
+4.Family Relationship - quality of family relationships      (numeric: from 1 - very bad to 5 - excellent)
+5. Going Out with Friends - going out with friends (numeric: from 1 - very low to 5 - very high)
+6. Weekday Alc Consumption - weekday alcohol consumption (numeric: from 1 - very low to 5 - very high)
+7. Weekend Alc Consumption - weekend alcohol consumption (numeric: from 1 - very low to 5 - very high)
+8. Health Condition - current health status (numeric: from 1 - very bad to 5 - very good)
+
+The table provides a quick way to summarize the data, allowing us to compare the different variables and identify patterns or relationships between them. 
+The reason for selecting a table with these specific columns is to gain better insights into the factors that might affect the alcohol consumption habits and overall health of underage students. For instance, we can use the table to examine the relationship between family relationship and alcohol consumption, or between going out with friends and alcohol consumption, and how these factors might impact students' overall health. I feel that the columns I selected may have more significance or importance as it highlights critical issues that could be related to underage drinking. I wanted to keep the age under 18 to get the most extreme cases of underage drinking. 
+After skimming through the table that was projected from the code, the table revealed some pretty interesting data. Looks like most of them had a pretty good relationship with their family and that might not have been the case for drinking. However, a lot of them seem to not go out often with friends, and maybe the drinking arised from loneliness. Also, it looks like a lot of them don’t have a great health condition which I guess is due to a lot of drinking. Interesting thing to note - looks like weekday and weekend alcohol consumptions are low, but the health data seems to contradict that. It would be fascinating to explore more of the dataset to see any changes in this trend outside the table. 
+
 ### Chart 1
 
 ```{r, echo = FALSE, code = readLines("Chart1.R")}
