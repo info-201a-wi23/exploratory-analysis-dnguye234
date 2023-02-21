@@ -118,8 +118,6 @@ I choose this faceted chart to see if there is any relationship to the number of
 
 ### Chart 3
 
-Include a chart
-
 I choose this scatter plot chart to see if theres a correlation between the different levels of weekend alcohol consumption and the different average grades students get. My hypothesis was that if students who have high levels of weekend alcohol consumption then their grades on average will be lower.
 
 ```{r, echo = FALSE, code = readLines("chart1_example.R")}
