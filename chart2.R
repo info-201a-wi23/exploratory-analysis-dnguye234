@@ -13,7 +13,11 @@ student_alc_consumption <- student_alc_consumption %>%
 ggplot(data = student_alc_consumption) + 
   geom_bar(stat= "identity", aes(x = count, 
                y = Walc)) +
-  facet_wrap(~famrel) 
+  facet_wrap(~famrel) +
+  labs(title = "Number of student engaging in Weekend Drinking", 
+       caption = "Faceted by rating of Family Relationship Quality",
+       y = "Rating of Weekend Alcohol Consumption",
+       x = "Number of Students")
 
 
 
