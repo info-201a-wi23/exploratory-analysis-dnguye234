@@ -9,8 +9,13 @@ student_alc_consumption <- alc_consumption %>%
   mutate(g_avg = rowMeans(select(alc_consumption, c(G1, G2, G3)))) 
 
 
-ggplot(student_alc_consumption, aes(x = Walc, y = g_avg)) + geom_point(size = 1.5, color = "red") + ggtitle("Average grades distribution in each level of weekend alcohol consumption")
+ggplot(student_alc_consumption, aes(x = Walc, y = g_avg)) + geom_point(size = 1.5, color = "red") + ggtitle("Average grades distribution in each level of weekend alcohol consumption") + labs(x = "Weekend Alcohol Consumption", y = "Grade Averages")
 
+
+
+
+num_walc_1 <- student_alc_consumption %>%
+  select(g_avg, Walc) %>%
 
 
 
