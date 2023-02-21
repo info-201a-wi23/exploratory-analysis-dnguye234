@@ -54,7 +54,7 @@ Some challenges and limitations that may come up with our project is that our da
 
 ### Summary Information
 
-Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students.
+Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students. Out of the almost 200 students in this data set who rated that they drink a 2 on a scale of 1-5 (low to high alcohol consumption) during the work week, `r not_paid_course` are not in paid classes. Compared to `r paid_course`, is a massive difference. 
 
 ### Table
 
