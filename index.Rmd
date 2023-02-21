@@ -3,9 +3,8 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
-## Project title
+## Student Alcohol Consumption
 
-Give your project a concise, interesting title that summarizes the entirety of your project
 
 ### Authors
 
