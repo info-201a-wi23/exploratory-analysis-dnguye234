@@ -28,4 +28,12 @@ paid_course <- student_alc_consumption %>%
   count() %>% 
   pull()
 
+num_walc_1 <- student_alc_consumption %>%
+  filter(g_avg > 15, Walc == 1) %>%
+  summarize(length(g_avg))
+
+num_walc_5 <- student_alc_consumption %>%
+  filter(g_avg > 15, Walc == 5) %>%
+  summarize(length(g_avg))
+
 summary_values <- list(not_paid_course, paid_course, num_walc, rating)
