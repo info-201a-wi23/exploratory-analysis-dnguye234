@@ -82,7 +82,7 @@ ggplot(student_alc_consumption, aes(x = paid,y = Dalc, color = paid)) +
 ```
 
 ### Chart 2
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, code = readLines("chart2_example.R")}
 library("ggplot2")
 library("dplyr")
 
@@ -104,7 +104,7 @@ ggplot(data = student_alc_consumption) +
        y = "Rating of Weekend Alcohol Consumption",
        x = "Number of Students")
 ```
-Describe why you chose this chart and what information it reveals
+I choose this faceted chart to see if there is any relationship to the number of students drinking on weekend, as well as their severity, and their rating of their family quality. My hypothesis was that maybe if students were not having a great time at home, they will be more likely to go out and/or drink on the weekend.
 
 ### Chart 3
 
