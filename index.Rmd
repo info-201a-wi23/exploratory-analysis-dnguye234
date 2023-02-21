@@ -57,7 +57,7 @@ Through our analysis of this dataset, we have found a few interesting trends whi
 
 ### Table
 
-```{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, code = readLines("Table.R")}
 library(dplyr)
 student_alc <- read.csv("student-por.csv")
 
