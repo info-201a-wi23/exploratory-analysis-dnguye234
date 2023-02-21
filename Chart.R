@@ -15,7 +15,12 @@ ggplot(student_alc_consumption, aes(x = Walc, y = g_avg)) + geom_point(size = 1.
 
 
 num_walc_1 <- student_alc_consumption %>%
-  select(g_avg, Walc) %>%
+  filter(g_avg > 15, Walc == 1) %>%
+  summarize(length(g_avg))
+
+num_walc_5 <- student_alc_consumption %>%
+  filter(g_avg > 15, Walc == 5) %>%
+  summarize(length(g_avg))
 
 
 
