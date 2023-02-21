@@ -53,11 +53,22 @@ Some challenges and limitations that may come up with our project is that our da
 
 ### Summary Information
 ```{r, echo = FALSE, code = readLines("Summary.R")}
-alc_consumption <- read.csv("student-por.csv", FALSE)
-student_alc_consumption <- alc_consumption %>% 
-  select(V2, V3, V5, V6, V9, V10, V11, V12, V15, V17, V18, V19, V21, V22, V24, V25, V26, V27, V28, V29, V30, V33)
-names(student_alc_consumption) <- student_alc_consumption[1,]
-student_alc_consumption <- student_alc_consumption[-1,]
+
+
+student_alc_consumption <- read.csv("student-por.csv")
+student_alc_consumption <- student_alc_consumption %>%
+  mutate(count = 1)
+
+num_walc <- student_alc_consumption %>%
+  group_by(Walc == 3) %>%
+  summarise(sum(count)) %>%
+  pull()
+
+rating <- student_alc_consumption %>%
+  group_by(famrel == 3) %>%
+  summarise(avg_walc = mean(as.numeric(Walc))) %>%
+  pull()
+
 
 not_paid_course <- student_alc_consumption %>%
   select(Dalc, paid) %>% 
@@ -73,7 +84,10 @@ paid_course <- student_alc_consumption %>%
   count() %>% 
   pull()
 
-summary_values <- list(not_paid_course, paid_course)
+
+
+summary_values <- list(not_paid_course, paid_course, num_walc, rating)
+
 ```
 
 Through our analysis of this dataset, we have found a few interesting trends which help us understand how student alcohol consumption affects students. Out of the almost 200 students in this data set who rated that they drink a 2 on a scale of 1-5 (low to high alcohol consumption) during the work week, `r toString(not_paid_course)` are not in paid classes. Compared to `r paid_course`, is a massive difference.
@@ -81,6 +95,7 @@ Through our analysis of this dataset, we have found a few interesting trends whi
 ### Table
 
 ```{r, echo = FALSE, code = readLines("Table.R")}
+
 table_student_alc <- select(student_alc, sex, age, 'Parental Status' = Pstatus , "Family Relationship" = famrel , "Going Out With Friends" = goout, "Weekday Alc Consumption" = Dalc, "Weekend Alc Consumption" = Walc, "Health Condition" = health  )
 
 table_student_alc <- table_student_alc %>% filter(age < 18 ) %>% head(50)
@@ -119,8 +134,6 @@ I choose this faceted chart to see if there is any relationship to the number of
 
 ### Chart 3
 
-I choose this scatter plot chart to see if theres a correlation between the different levels of weekend alcohol consumption and the different average grades students get. My hypothesis was that if students who have high levels of weekend alcohol consumption then their grades on average will be lower.
-
 ```{r, echo = FALSE, code = readLines("Chart.R")}
 
 student_alc_consumption <- alc_consumption %>%
@@ -130,3 +143,5 @@ student_alc_consumption <- alc_consumption %>%
 
 ggplot(student_alc_consumption, aes(x = Walc, y = g_avg)) + geom_point(size = 1.5, color = "red") + ggtitle("Average grades distribution in each level of weekend alcohol consumption")
 ```
+
+I choose this scatter plot chart to see if theres a correlation between the different levels of weekend alcohol consumption and the different average grades students get. My hypothesis was that if students who have high levels of weekend alcohol consumption then their grades on average will be lower.
